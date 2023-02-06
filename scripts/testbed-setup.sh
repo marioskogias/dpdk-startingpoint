@@ -28,4 +28,7 @@ fi
 
 
 ### Attach dpdk tap to the bridge
+#ip link set dev $infdpdk up
+#ip addr add 10.1.0.2/24 brd + dev $infdpdk
 brctl addif $bridge $infdpdk
+#ip link set $infdpdk master $bridge

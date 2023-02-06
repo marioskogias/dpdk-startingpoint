@@ -136,6 +136,8 @@ void dpdk_poll(void)
 		return;
 
   printf("I received packet\n");
+  for (int i=0;i<ret;i++)
+    eth_in(rx_pkts[i]);
 
   /* FIXME: Start your logic from here */
 }
